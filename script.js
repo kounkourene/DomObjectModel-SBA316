@@ -1,4 +1,4 @@
-//Adding a List of Items
+//*************Adding a List of Items
 let addInput = document.getElementById("add-input");
 
 let addBtn = document.getElementById("add-btn");
@@ -33,7 +33,7 @@ addBtn.addEventListener("click", function (e) {
   }
 });
 
-//Editing and Deleting Items
+//*************Editing and Deleting Items
 ulList.addEventListener("click", function (e) {
   if (e.target.classList[1] === "fa-pencil-square-o") {
     let parentPar = e.target.parentNode;
@@ -63,7 +63,7 @@ ulList.addEventListener("click", function (e) {
   }
 });
 
-//Hiding Notes
+//***************Hiding Notes
 
 let hideNotes = document.getElementById("hide");
 
@@ -76,4 +76,21 @@ hideNotes.addEventListener("click", function () {
     label.textContent = "Hide notes";
     ulList.style.display = "block";
   }
+});
+
+//*********************Search Notes */
+
+let searchNotes = document.querySelector("#search-note, input");
+searchNotes.addEventListener("keyup", function (e) {
+  let searcChar = e.target.value.toUpperCase();
+  let listNotes = ulList.getElementsByTagName("li");
+  Array.from(listNotes).forEach(function (note) {
+    let parText = note.firstElementChild.textContent;
+
+    if (parText.toUpperCase().indexOf(searcChar) !== -1) {
+      note.style.display = "block";
+    } else {
+      note.style.display = "none";
+    }
+  });
 });
