@@ -94,3 +94,13 @@ searchNotes.addEventListener("keyup", function (e) {
     }
   });
 });
+
+//*******************Loging in ****************/
+document.getElementById("email").addEventListener("input", checkEmail);
+function checkEmail(event) {
+  let email = event.target.value;
+  let errorEmail = document.getElementById("emailMessage");
+  if (!email.includes("@") || !email.includes(".")) {
+    alert("Invalid Email");
+  }
+}
