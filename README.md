@@ -1,6 +1,6 @@
 Description of the project:
 Technologies used: JavaScript, HTML and CSS
-This project consited of building a web application called Note Manager that allows users to update the notes: 
+This project consisted of building a web application called Note Manager that allows users to update the notes: 
 Functionalities: 
 - Search : Users can search any note by typing any letter lower case or Upser case. Both cases will give the same results.
 - Hide notes: Users have the ability to hide the notes if they dont want them to be visible.
